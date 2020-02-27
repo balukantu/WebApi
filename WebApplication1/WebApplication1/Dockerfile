@@ -4,7 +4,7 @@ EXPOSE 80
 
 FROM microsoft/dotnet:2.1-sdk AS build
 WORKDIR /src
-COPY ["WebApplication1/dockerappkub.csproj", "dockerappkub/"]
+COPY ["WebApplication1/WebApplication1/dockerappkub.csproj", "dockerappkub/"]
 RUN dotnet restore "dockerappkub/dockerappkub.csproj"
 WORKDIR "/src/dockerappkub"
 COPY . .
